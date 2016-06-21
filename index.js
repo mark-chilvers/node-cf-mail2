@@ -30,19 +30,7 @@ module.exports = {
         };
     });    
     
-
-    child.stdout.on('data', function(data) {
-        console.log('stdout: ' + data);
-      context.success("Success: " + data);      
-    });
-
-    child.stderr.on('data', function(data) {
-        console.error('error: ' + data);
-        context.failure("Error: " + data);
-    });
-
-    child.on('close', function(code) {
-        console.log('closing code: ' + code);
-    });
+    context.success("Success!");
+    
   },
 };
