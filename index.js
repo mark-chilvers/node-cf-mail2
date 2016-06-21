@@ -14,21 +14,21 @@ module.exports = {
     });
     
     var mailOptions = {
-    from: 'mark.chilvers@gmail.com', // sender address
-    to: 'mark.j.chilvers@pwc.com', // list of receivers
-    subject: 'Email Example', // Subject line
-    text: "Sample mail content sent from job functions" 
-};
-    
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        console.log(error);
-        res.json({yo: 'error'});
-    }else{
-        console.log('Message sent: ' + info.response);
-        res.json({yo: info.response});
+      from: 'mark.chilvers@gmail.com', // sender address
+      to: 'mark.j.chilvers@pwc.com', // list of receivers
+      subject: 'Email Example', // Subject line
+      text: "Sample mail content sent from job functions" 
     };
-});    
+    
+    transporter.sendMail(mailOptions, function(error, info){
+       if(error){
+          console.log(error);
+          res.json({yo: 'error'});
+        }else{
+          console.log('Message sent: ' + info.response);
+          res.json({yo: info.response});
+        };
+    });    
     
 
     child.stdout.on('data', function(data) {
@@ -44,5 +44,5 @@ transporter.sendMail(mailOptions, function(error, info){
     child.on('close', function(code) {
         console.log('closing code: ' + code);
     });
-  }
+  },
 };
