@@ -1,0 +1,17 @@
+{
+  "name": "node-cf-mail2",
+  "version": "1.0.0",
+  "description": "MJC Testing sending a mail",
+  "main": "index.js",
+  "keywords": [
+    "cloud",
+    "functions",
+    "gcp",
+    "gcf"
+  ],
+  "author": "Mark Chilvers",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^2.2.0"
+  }
+}
